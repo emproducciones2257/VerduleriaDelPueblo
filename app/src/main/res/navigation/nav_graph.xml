@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inicio">
+
+    <fragment
+        android:id="@+id/inicio"
+        android:name="com.emproducciones.verduleriadelpueblo.View.Inicio"
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio" >
+        <action
+            android:id="@+id/action_inicio_to_fragmentEleccionIniciar"
+            app:destination="@id/fragmentEleccionIniciar" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentEleccionIniciar"
+        android:name="com.emproducciones.verduleriadelpueblo.View.fragmentEleccionIniciar"
+        android:label="fragment_eleccion_iniciar"
+        tools:layout="@layout/fragment_eleccion_iniciar" >
+        <action
+            android:id="@+id/action_fragmentEleccionIniciar_to_vtaFragment"
+            app:destination="@id/vtaFragment" />
+        <action
+            android:id="@+id/action_fragmentEleccionIniciar_to_fragmentRegistrarProducto"
+            app:destination="@id/fragmentRegistrarProducto" />
+        <action
+            android:id="@+id/action_fragmentEleccionIniciar_to_fragmentRegistroVtas"
+            app:destination="@id/fragmentRegistroVtas" />
+        <action
+            android:id="@+id/action_fragmentEleccionIniciar_to_fragmentGestionImpresora"
+            app:destination="@id/fragmentGestionImpresora" />
+    </fragment>
+    <fragment
+        android:id="@+id/vtaFragment"
+        android:name="com.emproducciones.verduleriadelpueblo.View.vtaFragment"
+        android:label="vta_fragment"
+        tools:layout="@layout/vta_fragment" >
+        <action
+            android:id="@+id/action_vtaFragment_to_fragFinVta"
+            app:destination="@id/fragFinVta" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragFinVta"
+        android:name="com.emproducciones.verduleriadelpueblo.View.fragFinVta"
+        android:label="fragment_frag_fin_vta"
+        tools:layout="@layout/fragment_frag_fin_vta" >
+        <argument
+            android:name="listaProductosVenta"
+            app:argType="com.emproducciones.verduleriadelpueblo.modelo.vtaProd[]" />
+        <argument
+            android:name="totalDineroVta"
+            app:argType="float"
+            android:defaultValue="0.0" />
+        <action
+            android:id="@+id/action_fragFinVta_to_fragmentEleccionIniciar"
+            app:destination="@id/fragmentEleccionIniciar" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentRegistrarProducto"
+        android:name="com.emproducciones.verduleriadelpueblo.View.fragmentRegistrarProducto"
+        android:label="fragment_registrar_producto"
+        tools:layout="@layout/fragment_registrar_producto" />
+    <fragment
+        android:id="@+id/fragmentRegistroVtas"
+        android:name="com.emproducciones.verduleriadelpueblo.fragmentRegistroVtas"
+        android:label="fragment_registro_vtas"
+        tools:layout="@layout/fragment_registro_vtas" />
+    <fragment
+        android:id="@+id/fragmentGestionImpresora"
+        android:name="com.emproducciones.verduleriadelpueblo.View.FragmentGestionImpresora"
+        android:label="fragment_gestion_impresora"
+        tools:layout="@layout/fragment_gestion_impresora" />
+</navigation>

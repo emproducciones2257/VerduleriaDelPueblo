@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Verduleria Del Pueblo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="NOMBRE_PRODUCTO">Nombre Producto</string>
+    <string name="PRECIO">Precio $ por KG / Unidad</string>
+    <string name="CANTIDAD_UNIDAD">Cantidad Promo</string>
+    <string name="PRECIO_PROMO">$ Precio Promo</string>
+    <string name="KG">Kg.</string>
+</resources>

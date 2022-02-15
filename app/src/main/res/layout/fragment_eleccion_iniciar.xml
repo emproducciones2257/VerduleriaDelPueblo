@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.fragmentEleccionIniciar">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/inicio_app">
+
+        <Button
+            android:id="@+id/btnVta"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/bg_btn"
+            android:text="Venta"
+            android:textColor="@color/primaryLightColor"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline9" />
+
+        <Button
+            android:id="@+id/vtnProd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_btn"
+            android:text="Productos"
+            android:textColor="@color/primaryLightColor"
+            app:layout_constraintEnd_toEndOf="@+id/btnVta"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/btnVta"
+            app:layout_constraintTop_toBottomOf="@+id/btnVta" />
+
+        <Button
+            android:id="@+id/vtnReg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_btn"
+            android:text="Registros"
+            android:textColor="@color/primaryLightColor"
+            app:layout_constraintEnd_toEndOf="@+id/vtnProd"
+            app:layout_constraintStart_toStartOf="@+id/vtnProd"
+            app:layout_constraintTop_toBottomOf="@+id/vtnProd" />
+
+        <Button
+            android:id="@+id/btnGestionBT"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_btn"
+            android:text="Gestion Impresora"
+            android:textColor="@color/primaryLightColor"
+            app:layout_constraintEnd_toEndOf="@+id/vtnProd"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/vtnProd"
+            app:layout_constraintTop_toBottomOf="@+id/vtnReg" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="454dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/inicio_app_claro">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-43dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/txtNombreProducto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:hint="@string/NOMBRE_PRODUCTO"
+                android:inputType="textCapWords|textAutoCorrect"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                app:layout_constraintEnd_toStartOf="@+id/guideline7"
+                app:layout_constraintStart_toStartOf="@+id/guideline5"
+                app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+
+            <EditText
+                android:id="@+id/txtPrecioProdNuevo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:ems="10"
+                android:hint="@string/PRECIO"
+                android:inputType="number|textPersonName"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                app:layout_constraintEnd_toEndOf="@+id/txtNombreProducto"
+                app:layout_constraintStart_toStartOf="@+id/txtNombreProducto"
+                app:layout_constraintTop_toBottomOf="@+id/txtNombreProducto" />
+
+            <TextView
+                android:id="@+id/txtTituloPromo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="PROMOCION"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/radButtUniVenta"
+                app:layout_constraintStart_toStartOf="@+id/radButtUniVenta"
+                app:layout_constraintTop_toBottomOf="@+id/radButtUniVenta" />
+
+            <EditText
+                android:id="@+id/edtPrecioPromo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:ems="10"
+                android:hint="@string/PRECIO_PROMO"
+                android:inputType="number"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                app:layout_constraintEnd_toEndOf="@+id/edtCantidadPromo"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/edtCantidadPromo"
+                app:layout_constraintTop_toBottomOf="@+id/edtCantidadPromo" />
+
+            <RadioGroup
+                android:id="@+id/radButtUniVenta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/textView8"
+                app:layout_constraintStart_toStartOf="@+id/textView8"
+                app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+                <RadioButton
+                    android:id="@+id/rdBtnKilo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="8dp"
+                    android:text="Kilo"
+                    android:textColor="@android:color/white" />
+
+                <RadioButton
+                    android:id="@+id/rdBtnUni"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="8dp"
+                    android:text="Unidad"
+                    android:textColor="@android:color/white" />
+            </RadioGroup>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="UNIDAD DE VENTA"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/radGroupCategorias"
+                app:layout_constraintStart_toStartOf="@+id/radGroupCategorias"
+                app:layout_constraintTop_toBottomOf="@+id/radGroupCategorias" />
+
+            <EditText
+                android:id="@+id/edtCantidadPromo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:ems="10"
+                android:hint="@string/CANTIDAD_UNIDAD"
+                android:inputType="number"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                app:layout_constraintEnd_toStartOf="@+id/guideline7"
+                app:layout_constraintStart_toStartOf="@+id/guideline5"
+                app:layout_constraintTop_toBottomOf="@+id/txtTituloPromo" />
+
+            <TextView
+                android:id="@+id/txtTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:inputType="textMultiLine"
+                android:lines="2"
+                android:text="NUEVO PRODUCTO:"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                app:layout_constraintEnd_toStartOf="@+id/guideline7"
+                app:layout_constraintStart_toStartOf="@+id/guideline6"
+                app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.94" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                app:layout_constraintHorizontal_bias="0.382"
+                app:layout_constraintStart_toStartOf="@+id/guideline5"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_red_apple" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline6b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.14" />
+
+            <TextView
+                android:id="@+id/txtTituloCat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="CATEGORIA"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/txtPrecioProdNuevo"
+                app:layout_constraintStart_toStartOf="@+id/txtPrecioProdNuevo"
+                app:layout_constraintTop_toBottomOf="@+id/txtPrecioProdNuevo" />
+
+            <RadioGroup
+                android:id="@+id/radGroupCategorias"
+                android:layout_width="235dp"
+                android:layout_height="31dp"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/txtTituloCat"
+                app:layout_constraintStart_toStartOf="@+id/txtTituloCat"
+                app:layout_constraintTop_toBottomOf="@+id/txtTituloCat">
+
+                <RadioButton
+                    android:id="@+id/rdBtnFruta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="5dp"
+                    android:shadowColor="@android:color/white"
+                    android:text="Fruta"
+                    android:textColor="@android:color/white" />
+
+                <RadioButton
+                    android:id="@+id/rdBtnVerd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="5dp"
+                    android:text="Verdura"
+                    android:textColor="@android:color/white" />
+
+                <RadioButton
+                    android:id="@+id/rdBtnVar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="5dp"
+                    android:text="Varios"
+                    android:textColor="@android:color/white" />
+
+            </RadioGroup>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.25" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
